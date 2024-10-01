@@ -10,7 +10,7 @@ class Smart_Blocks_Single_News_Two {
     public function render($attributes) {
         $this->attributes = $attributes;
         $content_rendered = '';
-        $content_rendered .= '<div id="' . $this->attributes['id'] . '">';
+        $content_rendered .= '<div id="' . esc_attr($this->attributes['id']) . '">';
         $content_rendered .= '<div ' . get_block_wrapper_attributes(['class' => 'sb-single-post wp-block-smart-blocks']) . '>';
 
         $args = $this->query_args();
@@ -35,7 +35,7 @@ class Smart_Blocks_Single_News_Two {
                 $content_rendered .= '</a>';
                 $content_rendered .= '</div>';
 
-                $content_rendered .= '<div class="sb-post-content sb-align-' . $this->attributes['contentAlignment'] . '">';
+                $content_rendered .= '<div class="sb-post-content sb-align-' . esc_attr($this->attributes['contentAlignment']) . '">';
                 $content_rendered .= '<h3 class="sb-post-title ' . smart_blocks_get_font_class($this->attributes['postTypographyFamily'], $this->attributes['postTypographyWeight'], $this->attributes['postTypographyTextTransform'], $this->attributes['postTypographyTextDecoration']) . '"><a href="' . get_the_permalink() . '">' . esc_html(get_the_title()) . '</a></h3>';
 
                 $content_rendered .= $this->get_post_meta();
@@ -51,7 +51,7 @@ class Smart_Blocks_Single_News_Two {
         }
         $content_rendered .= '</div>';
         $content_rendered .= '</div>';
-        return $content_rendered;
+        return apply_filters('smart_blocks_single_news_two_render', $content_rendered, $attributes);
     }
 
     /** Get Post Metas */

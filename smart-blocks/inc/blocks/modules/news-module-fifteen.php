@@ -13,7 +13,7 @@ class Smart_Blocks_News_Module_Fifteen {
 
         $display_cat = $this->attributes['postPostCategory'];
         $image_size = $this->attributes['postImageSize'];
-        $content_rendered .= '<div id="' . $this->attributes['id'] . '">';
+        $content_rendered .= '<div id="' . esc_attr($this->attributes['id']) . '">';
         $content_rendered .= '<div ' . get_block_wrapper_attributes(['class' => 'sb-news-module-fifteen wp-block-smart-blocks']) . '>';
         $content_rendered .= $this->render_header();
 
@@ -47,7 +47,7 @@ class Smart_Blocks_News_Module_Fifteen {
         $content_rendered .= '</div>';
         $content_rendered .= '</div>';
         $content_rendered .= '</div>';
-        return $content_rendered;
+        return apply_filters('smart_blocks_news_module_fifteen_render', $content_rendered, $attributes);
     }
 
     /** Render Header */
@@ -55,9 +55,9 @@ class Smart_Blocks_News_Module_Fifteen {
         $content = '';
 
         if (isset($this->attributes['headerTitle']) && $this->attributes['headerTitle']) {
-            $content .= '<h2 class="sb-block-title ' . $this->attributes['headerStyle'] . ' ' . smart_blocks_get_font_class($this->attributes['headerTitleTypographyFamily'], $this->attributes['headerTitleTypographyWeight'], $this->attributes['headerTitleTypographyTextTransform'], $this->attributes['headerTitleTypographyTextDecoration']) . '">';
+            $content .= '<h2 class="sb-block-title ' . esc_attr($this->attributes['headerStyle']) . ' ' . smart_blocks_get_font_class($this->attributes['headerTitleTypographyFamily'], $this->attributes['headerTitleTypographyWeight'], $this->attributes['headerTitleTypographyTextTransform'], $this->attributes['headerTitleTypographyTextDecoration']) . '">';
             $content .= '<span>';
-            $content .= $this->attributes['headerTitle'];
+            $content .= wp_kses_post($this->attributes['headerTitle']);
             $content .= '</span>';
             $content .= '</h2>';
         }
