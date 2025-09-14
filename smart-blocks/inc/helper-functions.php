@@ -201,3 +201,168 @@ if (!function_exists('smart_blocks_get_font_class')) {
     }
 
 }
+
+
+if (!function_exists('smart_blocks_get_all_blocks_list')) {
+    function smart_blocks_get_all_blocks_list() {
+        $all_wid = apply_filters('sb_all_blocks_list', array(
+            'section' => array(
+                'name' => 'Columns',
+                'category' => 'creative',
+                'icon' => ''
+            ),
+            'container' => array(
+                'name' => 'Container',
+                'category' => 'creative',
+                'icon' => ''
+            ),
+            'news-module-one' => array(
+                'name' => 'News Module One',
+                'category' => 'essential',
+                'icon' => ''
+            ),
+            'news-module-two' => array(
+                'name' => 'News Module Two',
+                'category' => 'advanced',
+                'icon' => ''
+            ),
+            'news-moduel-three' => array(
+                'name' => 'News Module Three',
+                'category' => 'creative',
+                'icon' => ''
+            ),
+            'news-module-four' => array(
+                'name' => 'News Module Four',
+                'category' => 'listing',
+                'icon' => ''
+            ),
+            'news-module-five' => array(
+                'name' => 'News Module Five',
+                'category' => 'creative',
+                'icon' => ''
+            ),
+            'news-module-six' => array(
+                'name' => 'News Module Six',
+                'category' => 'creative',
+                'icon' => ''
+            ),
+            'news-module-seven' => array(
+                'name' => 'News Module Seven',
+                'category' => 'essential',
+                'icon' => ''
+            ),
+            'news-module-eight' => array(
+                'name' => 'News Module Eight',
+                'category' => 'creative',
+                'icon' => ''
+            ),
+            'news-module-nine' => array(
+                'name' => 'News Module Nine',
+                'category' => 'essential',
+                'icon' => ''
+            ),
+            'news-module-ten' => array(
+                'name' => 'News Module Ten',
+                'category' => 'creative',
+                'icon' => ''
+            ),
+            'news-module-eleven' => array(
+                'name' => 'News Module Eleven',
+                'category' => 'essential',
+                'icon' => ''
+            ),
+            'news-module-twelve' => array(
+                'name' => 'News Module Twelve',
+                'category' => 'advanced',
+                'icon' => ''
+            ),
+            'news-module-thirteen' => array(
+                'name' => 'News Module Thirteen',
+                'category' => 'listing',
+                'icon' => ''
+            ),
+            'news-module-fourteen' => array(
+                'name' => 'News Module Fourteen',
+                'category' => 'essential',
+                'icon' => ''
+            ),
+            'news-module-fifteen' => array(
+                'name' => 'News Module Fifteen',
+                'category' => 'essential',
+                'icon' => ''
+            ),
+            'tile-module-one' => array(
+                'name' => 'Tile Module One',
+                'category' => 'advanced',
+                'icon' => ''
+            ),
+            'tile-module-two' => array(
+                'name' => 'Tile Module Two',
+                'category' => 'essential',
+                'icon' => ''
+            ),
+            'tile-module-three' => array(
+                'name' => 'Tile Module Three',
+                'category' => 'essential',
+                'icon' => ''
+            ),
+            'carousel-module-one' => array(
+                'name' => 'Carousel Module',
+                'category' => 'essential',
+                'icon' => ''
+            ),
+            'ticker-module' => array(
+                'name' => 'Ticker Module',
+                'category' => 'advanced',
+                'icon' => ''
+            ),
+            'single-news-one' => array(
+                'name' => 'Single News One',
+                'category' => 'listing',
+                'icon' => ''
+            ),
+            'single-news-two' => array(
+                'name' => 'Single News Two',
+                'category' => 'listing',
+                'icon' => ''
+            ),
+            // 'template-import' => array(
+            //     'name' => 'Template Import',
+            //     'icon' => 'sb-icons-image-accordion',
+            //     'category' => 'listing'
+            // ),
+        ));
+        return $all_wid;
+    }
+}
+
+
+
+function sb_get_all_blocks_desc() {
+    return array(
+        'section' => esc_html__('Place content side by side inside a Columns block', 'smart-blocks'),
+        'container' => esc_html__('Group blocks together for layout or styling', 'smart-blocks'),
+        'news-module-one' => esc_html__('Displays News Posts', 'smart-blocks'),
+        'news-module-two' => esc_html__('Displays News Posts', 'smart-blocks'),
+        'news-moduel-three' => esc_html__('Displays News Posts', 'smart-blocks'),
+        'news-module-four' => esc_html__('Displays News Posts', 'smart-blocks'),
+        'news-module-five' => esc_html__('Displays News Posts', 'smart-blocks'),
+        'news-module-six' => esc_html__('Displays News Posts', 'smart-blocks'),
+        'news-module-seven' => esc_html__('Displays News Posts', 'smart-blocks'),
+        'news-module-eight' => esc_html__('Displays News Posts', 'smart-blocks'),
+        'news-module-nine' => esc_html__('Displays News Posts', 'smart-blocks'),
+        'news-module-ten' => esc_html__('Displays News Posts', 'smart-blocks'),
+        'news-module-eleven' => esc_html__('Displays News Posts', 'smart-blocks'),
+        'news-module-twelve' => esc_html__('Displays News Posts', 'smart-blocks'),
+        'news-module-thirteen' => esc_html__('Displays News Posts', 'smart-blocks'),
+        'news-module-fourteen' => esc_html__('Displays News Posts', 'smart-blocks'),
+        'news-module-fifteen' => esc_html__('Displays News Posts', 'smart-blocks'),
+        'ticker-module' => esc_html__('Displays News Posts', 'smart-blocks'),
+        'tile-module-one' => esc_html__('Displays News Posts', 'smart-blocks'),
+        'tile-module-two' => esc_html__('Displays News Posts', 'smart-blocks'),
+        'tile-module-three' => esc_html__('Displays News Posts', 'smart-blocks'),
+        'single-news-one' => esc_html__('Displays News Posts', 'smart-blocks'),
+        'single-news-two' => esc_html__('Displays News Posts', 'smart-blocks'),
+        'carousel-module-one' => esc_html__('Displays News Posts', 'smart-blocks'),
+    );
+}
